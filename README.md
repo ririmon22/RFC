@@ -20,7 +20,8 @@ RFCの全文翻訳や原規格の代替ではない。詳細な規範要件・Er
 7. RFC 5216 → RFC 9190：EAP-TLSの基本とTLS 1.3更新
 8. RFC 5280 → IEEE 802.1AR → RFC 7030：証明書、デバイスID、登録
 9. RFC 5176 → RFC 2866：CoAと監査ログ
-10. RFC 6614 → RFC 9765：RADIUS輸送保護と新プロファイル
+10. RFC 6613 → RFC 6614 → RFC 7360 → RFC 9765：RADIUS転送方式（TCP/TLS/DTLS）と新プロファイル
+11. [RADIUS転送方式の比較](standards/RADIUS_UDP_TCP_TLS_DTLS_通信方式比較.md)：UDP、TCP、TLS、DTLSのレイヤー構造・信頼性・暗号化の違い
 
 ## システム統合の考え方
 
@@ -36,25 +37,29 @@ flowchart LR
 
 この図のKeylime/TPM/Policy Controller連携は複数規格を組み合わせた**システム設計例**であり、RADIUSやIEEE 802.1Xだけで自動規定される機能ではない。
 
+## 追加資料（2026-11-26）
+
+- [RADIUS over UDP / TCP / TLS / DTLS の詳細比較](standards/RADIUS_UDP_TCP_TLS_DTLS_通信方式比較.md) — ユーザー指定の図を踏まえた階層・暗号化・配送特性・規格上の注意点。RFC 6613とRFC 7360の参照も追加。
+
 ## 収録ファイル
 
 | ファイル | サイズ | 内容 |
 |---|---:|---|
-| [IEEE8021AR_DevID_日本語詳細解説.md](IEEE8021AR_DevID_日本語詳細解説.md) | 13.9 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [IEEE8021X_ポート認証_日本語詳細解説.md](IEEE8021X_ポート認証_日本語詳細解説.md) | 14.5 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC2865_RADIUS_日本語詳細解説.md](RFC2865_RADIUS_日本語詳細解説.md) | 30.0 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC2866_Accounting_日本語詳細解説.md](RFC2866_Accounting_日本語詳細解説.md) | 14.0 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC3579_RADIUS_EAP_日本語詳細解説.md](RFC3579_RADIUS_EAP_日本語詳細解説.md) | 14.5 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC3580_IEEE8021X_RADIUS_日本語詳細解説.md](RFC3580_IEEE8021X_RADIUS_日本語詳細解説.md) | 14.2 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC3748_EAP_日本語詳細解説.md](RFC3748_EAP_日本語詳細解説.md) | 14.3 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC5176_CoA_Disconnect_日本語詳細解説.md](RFC5176_CoA_Disconnect_日本語詳細解説.md) | 14.0 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC5216_EAP_TLS_日本語詳細解説.md](RFC5216_EAP_TLS_日本語詳細解説.md) | 13.9 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC5280_X509_PKI_日本語詳細解説.md](RFC5280_X509_PKI_日本語詳細解説.md) | 15.4 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC6614_RadSec_日本語詳細解説.md](RFC6614_RadSec_日本語詳細解説.md) | 13.2 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC7030_EST_日本語詳細解説.md](RFC7030_EST_日本語詳細解説.md) | 14.5 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC8446_TLS13_日本語詳細解説.md](RFC8446_TLS13_日本語詳細解説.md) | 15.1 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC9190_EAP_TLS13_日本語詳細解説.md](RFC9190_EAP_TLS13_日本語詳細解説.md) | 14.6 KiB | 独自の日本語解説・通信例・異常系・演習 |
-| [RFC9765_RADIUS11_日本語詳細解説.md](RFC9765_RADIUS11_日本語詳細解説.md) | 12.7 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [IEEE8021AR_DevID_日本語詳細解説.md](standards/IEEE8021AR_DevID_日本語詳細解説.md) | 13.9 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [IEEE8021X_ポート認証_日本語詳細解説.md](standards/IEEE8021X_ポート認証_日本語詳細解説.md) | 14.5 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC2865_RADIUS_日本語詳細解説.md](standards/RFC2865_RADIUS_日本語詳細解説.md) | 30.0 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC2866_Accounting_日本語詳細解説.md](standards/RFC2866_Accounting_日本語詳細解説.md) | 14.0 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC3579_RADIUS_EAP_日本語詳細解説.md](standards/RFC3579_RADIUS_EAP_日本語詳細解説.md) | 14.5 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC3580_IEEE8021X_RADIUS_日本語詳細解説.md](standards/RFC3580_IEEE8021X_RADIUS_日本語詳細解説.md) | 14.2 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC3748_EAP_日本語詳細解説.md](standards/RFC3748_EAP_日本語詳細解説.md) | 14.3 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC5176_CoA_Disconnect_日本語詳細解説.md](standards/RFC5176_CoA_Disconnect_日本語詳細解説.md) | 14.0 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC5216_EAP_TLS_日本語詳細解説.md](standards/RFC5216_EAP_TLS_日本語詳細解説.md) | 13.9 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC5280_X509_PKI_日本語詳細解説.md](standards/RFC5280_X509_PKI_日本語詳細解説.md) | 15.4 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC6614_RadSec_日本語詳細解説.md](standards/RFC6614_RadSec_日本語詳細解説.md) | 13.2 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC7030_EST_日本語詳細解説.md](standards/RFC7030_EST_日本語詳細解説.md) | 14.5 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC8446_TLS13_日本語詳細解説.md](standards/RFC8446_TLS13_日本語詳細解説.md) | 15.1 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC9190_EAP_TLS13_日本語詳細解説.md](standards/RFC9190_EAP_TLS13_日本語詳細解説.md) | 14.6 KiB | 独自の日本語解説・通信例・異常系・演習 |
+| [RFC9765_RADIUS11_日本語詳細解説.md](standards/RFC9765_RADIUS11_日本語詳細解説.md) | 12.7 KiB | 独自の日本語解説・通信例・異常系・演習 |
 
 ## 品質上の限界
 
