@@ -9,6 +9,18 @@
 
 RFCの全文翻訳や原規格の代替ではない。詳細な規範要件・Errata・現行登録番号の最終確認には、文書冒頭の公式原典を参照すること。IEEEは公開公式情報で確認できる範囲の説明であり、非公開本文の逐条対応は保証しない。
 
+
+## 実装別・設定値と通信仕様（2026-11-26追加）
+
+Supplicant・Authenticator・RADIUS Serverそれぞれの**設定値、変更時の動作、EAPOL/RADIUS通信フォーマット、OSSの種類・特徴・選定基準**を整理した実装ガイド。
+
+- [Supplicant：設定・EAP-TLS通信・OSS比較](implementation/Supplicant_設定と通信仕様_OSS比較.md)
+- [Authenticator：設定・ポート制御・OSS比較](implementation/Authenticator_設定と通信制御_OSS比較.md)
+- [RADIUS Server：設定・Attribute・OSS比較](implementation/RADIUS_Server_設定と通信仕様_OSS比較.md)
+- [三者の設定対応表と統合シーケンス](implementation/8021X_RADIUS_三者の設定対応と統合シーケンス.md)
+
+※OSS固有設定キーとRFC/IEEEで規定される値を区別している。hostapdの有線データ面制御・CoA・動的VLANは機器・実装依存であり、実機/仮想環境での確認が必要。
+
 ## 推奨読書順
 
 1. IEEE 802.1X：認証前の通信制御、EAPOL、Controlled Port
