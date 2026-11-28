@@ -21,6 +21,21 @@ Supplicant・Authenticator・RADIUS Serverそれぞれの**設定値、変更時
 
 ※OSS固有設定キーとRFC/IEEEで規定される値を区別している。hostapdの有線データ面制御・CoA・動的VLANは機器・実装依存であり、実機/仮想環境での確認が必要。
 
+## Linux 2台・MACsec終端スイッチ・RADIUS／Attestationの教材
+
+| 分類 | 教材 |
+|---|---|
+| IEEE | [802.1X・MKA、802.1AR、802.1AEの詳細教材と統合解説](standards/ieee/README.md) |
+| IETF 鍵管理 | [RFC 5247 EAP鍵管理](standards/ietf/RFC5247_EAP_Key_Management.md) |
+| IETF リモートアテステーション | [RFC 9334 RATS](standards/ietf/RFC9334_RATS_Architecture.md)、[RFC 9683 TPM完全性検証](standards/ietf/RFC9683_TPM_Remote_Integrity_Verification.md)、[RFC 9684 CHARRA](standards/ietf/RFC9684_CHARRA.md)、[RFC 9711 EAT](standards/ietf/RFC9711_EAT.md) |
+| TCG | [TPM 2.0 Library](standards/tcg/TPM2_Library.md)、[PC Client Firmware Profile](standards/tcg/PC_Client_Firmware_Profile.md)、[PC Client RIM](standards/tcg/PC_Client_RIM.md) |
+| NIST | [SP 800-193 ファームウェアの保護・検知・復旧](standards/nist/SP800-193_Firmware_Resiliency.md) |
+| DMTF | [DSP0274 SPDM](standards/dmtf/DSP0274_SPDM.md)、[DSP0277 セッション保護](standards/dmtf/DSP0277_Secured_Messages.md) |
+| 接続設計 | [規格間の関係と信頼境界](implementation/規格間の関係と信頼境界.md)、[2端末とスイッチ終端の統合シーケンス](implementation/2端末_MACsec終端_統合シーケンス.md) |
+| 仮想環境 | [4つの構築パターンと受入試験](implementation/仮想環境構築と受入試験.md) |
+
+実装は IEEE のポート認証とMACsec → EAP鍵管理 → TPM測定とRATS → 2端末の統合シーケンス → 仮想環境の順で追える。CHARRA、EAT、SPDMは対応する相互運用またはコンポーネント測定を選ぶ場合に読む。
+
 ## 推奨読書順
 
 1. IEEE 802.1X：認証前の通信制御、EAPOL、Controlled Port
